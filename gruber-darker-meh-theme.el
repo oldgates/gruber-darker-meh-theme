@@ -1,5 +1,6 @@
 ;;; gruber-darker-theme.el --- Gruber Darker color theme for Emacs 24.
 
+;; Copyright (C) 2023      Taufiq J
 ;; Copyright (C) 2013-2016 Alexey Kutepov a.k.a rexim
 ;; Copyright (C) 2009-2010 Jason R. Blevins
 
@@ -33,9 +34,8 @@
 ;; variant of the Gruber Dark theme for BBEdit by John Gruber. Adapted
 ;; for deftheme and extended by Alexey Kutepov a.k.a. rexim.
 
-
-(deftheme gruber-darker
-  "Gruber Darker color theme for Emacs 24")
+(deftheme gruber-darker-meh
+  "Gruber Darker color theme for Emacs 24+ with smoll change")
 
 ;; Please, install rainbow-mode.
 ;; Colors with +x are lighter. Colors with -x are darker.
@@ -61,6 +61,7 @@
       (gruber-darker-niagara-1 "#565f73")
       (gruber-darker-niagara   "#96a6c8")
       (gruber-darker-wisteria  "#9e95c7")
+      (gruber-darker-gray      "#857575")
       )
   (custom-theme-set-variables
    'gruber-darker
@@ -173,8 +174,8 @@
 
    ;; Font Lock
    `(font-lock-builtin-face ((t (:foreground ,gruber-darker-yellow))))
-   `(font-lock-comment-face ((t (:foreground ,gruber-darker-brown))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,gruber-darker-brown))))
+   `(font-lock-comment-face ((t (:foreground ,gruber-darker-gray))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,gruber-darker-gray))))
    `(font-lock-constant-face ((t (:foreground ,gruber-darker-quartz))))
    `(font-lock-doc-face ((t (:foreground ,gruber-darker-green))))
    `(font-lock-doc-string-face ((t (:foreground ,gruber-darker-green))))
@@ -276,7 +277,7 @@
    `(magit-diff-hunk-header ((t (:background ,gruber-darker-bg+2))))
    `(magit-diff-file-header ((t (:background ,gruber-darker-bg+4))))
    `(magit-log-sha1 ((t (:foreground ,gruber-darker-red+1))))
-   `(magit-log-author ((t (:foreground ,gruber-darker-brown))))
+   `(magit-log-author ((t (:foreground ,gruber-darker-gray))))
    `(magit-log-head-label-remote ((t ,(list :foreground gruber-darker-green
                                             :background gruber-darker-bg+1))))
    `(magit-log-head-label-local ((t ,(list :foreground gruber-darker-niagara
@@ -405,7 +406,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'gruber-darker)
+(provide-theme 'gruber-darker-meh)
 
 ;; Local Variables:
 ;; no-byte-compile: t
